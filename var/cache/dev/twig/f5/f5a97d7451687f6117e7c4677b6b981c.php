@@ -97,7 +97,26 @@ class __TwigTemplate_8ae256ae8378f18c299490d05a54ebea extends Template
 }
 </style>
 
-<h1 class=\"text-center mb-4\">Trouver mon asso</h1>
+<h1 class=\"text-center mb-4\">Trouver ton association</h1>
+
+<div class=\"container\">
+Votre volonté d'investissement dans des associations est admirable.
+En vous impliquant, vous faites une différence concrète dans des domaines qui vous
+tiennent à cœur. Votre engagement bénévole renforce le tissu social et vous offre l'opportunité
+de développer de nouvelles compétences.  Continuez à faire une différence positive.
+</div>
+<img src=\"";
+        // line 38
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../images/1erpage.jpg"), "html", null, true);
+        echo "\" class=\"w-50\" alt=\"responsive-image\">
+
+<div class=\"workchoice\">
+<img src=\"../images/jeuxcartes.png\" class=\"w-25 image1\">
+<img src=\"../images/jeuxcartes.png\" class=\"w-25 image2\">
+<img src=\"../images/jeuxcartes.png\" class=\"w-25 image3\">
+</div>
+
+<section class=\"questionnaire-body p-4 border rounded mx-auto\" id=\"slide-0\">
 
 <section class=\"questionnaire-body p-4 border rounded mx-auto\">
 
@@ -130,12 +149,12 @@ const escapeXSS = (text) => {
 const questionnaireBody = document.querySelector('.questionnaire-body');
 
 const filters = ";
-        // line 62
-        echo json_encode((isset($context["filters"]) || array_key_exists("filters", $context) ? $context["filters"] : (function () { throw new RuntimeError('Variable "filters" does not exist.', 62, $this->source); })()));
+        // line 78
+        echo json_encode((isset($context["filters"]) || array_key_exists("filters", $context) ? $context["filters"] : (function () { throw new RuntimeError('Variable "filters" does not exist.', 78, $this->source); })()));
         echo ";
 const associations = ";
-        // line 63
-        echo json_encode((isset($context["associations"]) || array_key_exists("associations", $context) ? $context["associations"] : (function () { throw new RuntimeError('Variable "associations" does not exist.', 63, $this->source); })()));
+        // line 79
+        echo json_encode((isset($context["associations"]) || array_key_exists("associations", $context) ? $context["associations"] : (function () { throw new RuntimeError('Variable "associations" does not exist.', 79, $this->source); })()));
         echo ";
 
 console.log('tous les filtres', filters);
@@ -285,8 +304,12 @@ const displayResult = () => {
 
 displayQuestion();
 
+
+
+
+
 ";
-        // line 372
+        // line 392
         echo "
 </script>
 
@@ -311,7 +334,7 @@ displayQuestion();
 
     public function getDebugInfo()
     {
-        return array (  290 => 372,  138 => 63,  134 => 62,  93 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  313 => 392,  157 => 79,  153 => 78,  110 => 38,  93 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -345,7 +368,23 @@ displayQuestion();
 }
 </style>
 
-<h1 class=\"text-center mb-4\">Trouver mon asso</h1>
+<h1 class=\"text-center mb-4\">Trouver ton association</h1>
+
+<div class=\"container\">
+Votre volonté d'investissement dans des associations est admirable.
+En vous impliquant, vous faites une différence concrète dans des domaines qui vous
+tiennent à cœur. Votre engagement bénévole renforce le tissu social et vous offre l'opportunité
+de développer de nouvelles compétences.  Continuez à faire une différence positive.
+</div>
+<img src=\"{{ asset('../images/1erpage.jpg')}}\" class=\"w-50\" alt=\"responsive-image\">
+
+<div class=\"workchoice\">
+<img src=\"../images/jeuxcartes.png\" class=\"w-25 image1\">
+<img src=\"../images/jeuxcartes.png\" class=\"w-25 image2\">
+<img src=\"../images/jeuxcartes.png\" class=\"w-25 image3\">
+</div>
+
+<section class=\"questionnaire-body p-4 border rounded mx-auto\" id=\"slide-0\">
 
 <section class=\"questionnaire-body p-4 border rounded mx-auto\">
 
@@ -527,6 +566,10 @@ const displayResult = () => {
 
 displayQuestion();
 
+
+
+
+
 {# const zoneAssos = document.querySelector('#assos');
 
 const zoneRegions = document.querySelector('.zone-regions');
@@ -691,6 +734,6 @@ displayAssos(); #}
 </script>
 
 {% endblock %}
-", "home/index.html.twig", "/Applications/MAMP/htdocs/php-decodeuse/app-societe-generale-simple/templates/home/index.html.twig");
+", "home/index.html.twig", "/Applications/MAMP/htdocs/php-decodeuse/societeGenerale/templates/home/index.html.twig");
     }
 }

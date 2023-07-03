@@ -54,21 +54,25 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
         echo "</title>
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
         <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM\" crossorigin=\"anonymous\">
-        ";
+        <link rel=\"stylesheet\" href=\"";
         // line 8
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("style.css"), "html", null, true);
+        echo "\">
+        ";
+        // line 9
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 10
+        // line 11
         echo "
         ";
-        // line 11
+        // line 12
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 13
+        // line 14
         echo "    </head>
     <body>
         ";
-        // line 15
-        $this->displayBlock('body', $context, $blocks);
         // line 16
+        $this->displayBlock('body', $context, $blocks);
+        // line 17
         echo "        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz\" crossorigin=\"anonymous\"></script>
     </body>
 </html>
@@ -100,7 +104,7 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
 
     }
 
-    // line 8
+    // line 9
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -110,7 +114,7 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 9
+        // line 10
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -120,7 +124,7 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
 
     }
 
-    // line 11
+    // line 12
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -130,7 +134,7 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 12
+        // line 13
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -140,7 +144,7 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
 
     }
 
-    // line 15
+    // line 16
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -163,9 +167,14 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  144 => 15,  134 => 12,  124 => 11,  114 => 9,  104 => 8,  85 => 5,  72 => 16,  70 => 15,  66 => 13,  64 => 11,  61 => 10,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  148 => 16,  138 => 13,  128 => 12,  118 => 10,  108 => 9,  89 => 5,  76 => 17,  74 => 16,  70 => 14,  68 => 12,  65 => 11,  63 => 9,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -177,6 +186,7 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
         <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM\" crossorigin=\"anonymous\">
+        <link rel=\"stylesheet\" href=\"{{ asset('style.css') }}\">
         {% block stylesheets %}
         {% endblock %}
 
@@ -188,6 +198,6 @@ class __TwigTemplate_d5cb65a7faacc1f492c7eb87e2b5ffc4 extends Template
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz\" crossorigin=\"anonymous\"></script>
     </body>
 </html>
-", "base.html.twig", "/Applications/MAMP/htdocs/php-decodeuse/app-societe-generale-simple/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/php-decodeuse/societeGenerale/templates/base.html.twig");
     }
 }
