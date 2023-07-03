@@ -45,8 +45,8 @@ de développer de nouvelles compétences.  Continuez à faire une différence po
 {# question2 slide 2:zoneRegions #}
     <div class="map">
         <h1> Où habitez-vous ?</h1>
-    </div>  
-
+    </div> 
+   
 
 {# question3 slide 3:zoneModeDeTravail #}
 
@@ -62,11 +62,15 @@ de développer de nouvelles compétences.  Continuez à faire une différence po
 
 
 {# question3 slide 3:final #}
+    <div class="">
+    <h3> Voici ton association !</h3> 
+    <div>
+
+    </div>
 
 
 <section class="questionnaire-body p-4 border rounded mx-auto" id="slide-0">
 
-<section class="questionnaire-body p-4 border rounded mx-auto">
 
     <h3 class="text-center mb-4">
         Question
@@ -80,6 +84,9 @@ de développer de nouvelles compétences.  Continuez à faire une différence po
     </div>
 
 </section>
+<div id="Progress_Status">
+  <div id="myprogressBar">1/5</div>
+</div>
 <script>
 const escapeXSS = (text) => {
     if (typeof text !== 'string') return text;
@@ -105,6 +112,7 @@ const regions = filters.filter(filter => filter.type === 'region');
 const modeDeTravail = filters.filter(filter => filter.type === 'mode-de-travail');
 const disponibilites = filters.filter(filter => filter.type === 'disponibilite');
 const missions = filters.filter(filter => filter.type === 'mission');
+const association = filters.filter(filter => filter.type === 'association');
 
 let etape = 0;
 const filtersSelected = {
@@ -112,16 +120,17 @@ const filtersSelected = {
     modeDeTravail: null,
     disponibilite: null,
     mission: null,
+    association: null,
 };
 
 const questions = [
     {
-        title: 'J\'habite dans la région :',
+        title: 'Où habitez-vous  :',
         type: 'region',
         filters: regions,
     },
     {
-        title: 'Je préfère effectuer ma mission :',
+        title: 'Quel format de mission souhaiteriez-vous ? :',
         type: 'modeDeTravail',
         filters: modeDeTravail,
     },
@@ -132,6 +141,11 @@ const questions = [
     },
     {
         title: 'Ma mission de mentorat, je l\'imagine :',
+        type: 'mission',
+        filters: missions,
+    },
+    {
+        title: 'Voici ton association !',
         type: 'mission',
         filters: missions,
     },
@@ -171,10 +185,14 @@ const displayQuestion = () => {
             if (btn.textContent === 'Retour') {
                 filtersSelected[questions[etape - 1].type] = null;
                 etape--;
+                questionnaireBody.setAttribute("id", "slide-"+etape);
+                removeBar()
             } else {
                 const id = parseInt(btn.getAttribute('data-id'));
                 filtersSelected[question.type] = id;
                 etape++;
+                questionnaireBody.setAttribute("id", "slide-"+etape);
+                updateBar()
             }
 
             if (etape > 3) {
@@ -212,6 +230,12 @@ const getFilteredAssociations = () => {
         ) {
             return false;
         }
+         if (
+            filtersSelected.association !== null
+            && !asso.filters.includes(filtersSelected.association)
+        ) {
+            return false;
+        }
         return true;
     });
 };
@@ -221,7 +245,7 @@ const displayResult = () => {
 
     questionnaireBody.innerHTML = `
     <h3 class="text-center mb-4">
-        Résultat
+        Résultats
     </h3>
     <div class="d-grid gap-2">
         ${assos.map(asso => `
@@ -246,6 +270,19 @@ const displayResult = () => {
 displayQuestion();
 
 
+var element = document.getElementById("myprogressBar"); 
+var taille = 1;
+
+function updateBar() {
+taille++; 
+  element.style.width = taille * 20 + '%';
+    element.innerHTML = taille  + '/5';
+}
+function removeBar() {
+taille--; 
+  element.style.width = taille * 20 + '%';
+    element.innerHTML = taille  + '/5';
+}
 
 
 
@@ -269,6 +306,7 @@ const filtersSelected = {
     modeDeTravail: [],
     disponibilites: [],
     missions: [],
+    association: [],
 };
 
 const escapeXSS = (text) => {

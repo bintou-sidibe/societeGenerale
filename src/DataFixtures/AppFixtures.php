@@ -79,12 +79,26 @@ class AppFixtures extends Fixture
             $this->addReference('mission_' . $i, $filter);
         }
 
+        $association = [
+            'Uniquement à distance, depuis chez moi ou sur mon lieu de travail, la digitalisation ça a du bon',
+            'En toute flexibilité, je peux me déplacer mais par téléphone ou visio cela me convient aussi',
+            'Uniquement en présentiel, le contact humain c\'est plus sympa',
+        ];
+        foreach ($association as $i => $association) {
+            $filter = new Filter();
+            $filter->setType('association');
+            $filter->setText($association);
+            $manager->persist($filter);
+            $this->addReference('association_' . $i, $filter);
+        }
+
         $asso = new Association();
         $asso->setName('Association 1');
         $asso->addFilter($this->getReference('region_0'));
         $asso->addFilter($this->getReference('modeDeTravail_0'));
         $asso->addFilter($this->getReference('disponibilite_0'));
         $asso->addFilter($this->getReference('mission_0'));
+        $asso->addFilter($this->getReference('association_0'));
 
         $manager->persist($asso);
 
@@ -94,6 +108,7 @@ class AppFixtures extends Fixture
         $asso->addFilter($this->getReference('modeDeTravail_1'));
         $asso->addFilter($this->getReference('disponibilite_1'));
         $asso->addFilter($this->getReference('mission_1'));
+        $asso->addFilter($this->getReference('association_1'));
 
         $manager->persist($asso);
 
@@ -103,6 +118,7 @@ class AppFixtures extends Fixture
         $asso->addFilter($this->getReference('modeDeTravail_2'));
         $asso->addFilter($this->getReference('disponibilite_0'));
         $asso->addFilter($this->getReference('mission_1'));
+        $asso->addFilter($this->getReference('association_1'));
 
         $manager->persist($asso);
 
