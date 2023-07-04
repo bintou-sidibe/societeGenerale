@@ -3,7 +3,6 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-{{ dump() }}
 
 {# <h1>Trouver mon asso</h1>
 
@@ -21,12 +20,38 @@
 <div id="assos">
 </div> #}
 
+<title>Trouve ton association !</title>
+
 <style>
 .questionnaire-body {
     max-width: 600px;
 }
 
+.text-center {
+ text-align: center;
+}
+
+.container {
+text-align: center;
+}
+       
+.w-50 {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+.btn-danger {
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: red;
+            color: black;
+}
+
 </style>
+
+<body>
 
 <h1 class="text-center mb-4">Trouver ton association</h1>
 
