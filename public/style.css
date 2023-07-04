@@ -100,3 +100,36 @@
   line-height: 32px;
   transition: 2s;
 }
+
+#slide-0 .btn:first-child{
+  background-image: url("./images/jeuxcartes.png");
+  width: 200px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeats;
+  transform: rotate(330deg)
+}
+
+#slide-0 .btn:nth-child(2){
+  background-image: url("./images/jeuxcartes.png");
+  width: 200px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeats;
+}
+
+#slide-0 .btn:nth-child(3){
+  background-image: url("./images/jeuxcartes.png");
+  width: 200px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeats;
+  transform: rotate(30deg); 
+}
+
+#slide-0 .carte {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
