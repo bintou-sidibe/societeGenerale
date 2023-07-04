@@ -25,6 +25,7 @@
 .questionnaire-body {
     max-width: 600px;
 }
+
 </style>
 
 <h1 class="text-center mb-4">Trouver ton association</h1>
@@ -59,6 +60,9 @@ de développer de nouvelles compétences.  Continuez à faire une différence po
     </div>
 
 </section>
+ <div id="Progress_Status">
+  <div id="myprogressBar">1/5</div>
+ </div>
 <script>
 const escapeXSS = (text) => {
     if (typeof text !== 'string') return text;
@@ -187,7 +191,7 @@ const getFilteredAssociations = () => {
         }
         if (
             filtersSelected.mission !== null
-            && !asso.filters.includes(filtersSelected.mission)
+            && oh!asso.filters.includes(filtersSelected.mission)
         ) {
             return false;
         }
@@ -223,16 +227,23 @@ const displayResult = () => {
 };
 
 displayQuestion();
+var element = document.getElementById("myprogressBar"); 
+var taille = 1;
+
+function updateBar() {
+taille++; 
+  element.style.width = taille * 20 + '%';
+    element.innerHTML = taille  + '/5';
+}
+function removeBar() {
+taille--; 
+  element.style.width = taille * 20 + '%';
+    element.innerHTML = taille  + '/5';
+}
 
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> main
 
 {# const zoneAssos = document.querySelector('#assos');
 

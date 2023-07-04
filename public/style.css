@@ -13,3 +13,20 @@
     transform: rotate(135deg);
 }
 
+#Progress_Status {
+  width: 50%;
+  background-color: #000000 ;
+  border-radius: 15px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 50px;
+}
+  
+#myprogressBar {
+  width: 25%;
+  height: 35px;
+  background-color:#E4002C;
+  text-align: center;
+  line-height: 32px;
+  transition: 2s;
+}
