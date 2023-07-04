@@ -85,11 +85,9 @@ class __TwigTemplate_8ae256ae8378f18c299490d05a54ebea extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context);
         echo "
-
 ";
-        // line 23
+        // line 22
         echo "
 <style>
 .questionnaire-body {
@@ -106,15 +104,41 @@ tiennent à cœur. Votre engagement bénévole renforce le tissu social et vous 
 de développer de nouvelles compétences.  Continuez à faire une différence positive.
 </div>
 <img src=\"";
-        // line 38
+        // line 37
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../images/1erpage.jpg"), "html", null, true);
         echo "\" class=\"w-50\" alt=\"responsive-image\">
 
-<div class=\"workchoice\">
-<img src=\"../images/jeuxcartes.png\" class=\"w-25 image1\">
-<img src=\"../images/jeuxcartes.png\" class=\"w-25 image2\">
-<img src=\"../images/jeuxcartes.png\" class=\"w-25 image3\">
-</div>
+
+
+";
+        // line 42
+        echo "
+
+
+";
+        // line 46
+        echo "    <div class=\"map\">
+        <h1> Où habitez-vous ?</h1>
+    </div>  
+
+
+";
+        // line 52
+        echo "
+
+
+";
+        // line 56
+        echo "
+
+
+";
+        // line 60
+        echo "
+
+";
+        // line 63
+        echo "
 
 <section class=\"questionnaire-body p-4 border rounded mx-auto\" id=\"slide-0\">
 
@@ -125,14 +149,13 @@ de développer de nouvelles compétences.  Continuez à faire une différence po
     </h3>
 
     <div class=\"d-grid gap-2\">
-        <button type=\"button\" class=\"btn btn-outline-dark btn-lg\">Réponse</button>
+        <button type=\"button\" class=\"btn btn-outline-dark btn-lg\" id=\"reponse-un\">Réponse</button>
         <button type=\"button\" class=\"btn btn-outline-dark btn-lg\">Réponse</button>
         <button type=\"button\" class=\"btn btn-outline-dark btn-lg\">Réponse</button>
         <button type=\"button\" class=\"btn btn-outline-danger btn-lg\">Retour</button>
     </div>
 
 </section>
-
 <script>
 const escapeXSS = (text) => {
     if (typeof text !== 'string') return text;
@@ -149,12 +172,12 @@ const escapeXSS = (text) => {
 const questionnaireBody = document.querySelector('.questionnaire-body');
 
 const filters = ";
-        // line 78
-        echo json_encode((isset($context["filters"]) || array_key_exists("filters", $context) ? $context["filters"] : (function () { throw new RuntimeError('Variable "filters" does not exist.', 78, $this->source); })()));
+        // line 96
+        echo json_encode((isset($context["filters"]) || array_key_exists("filters", $context) ? $context["filters"] : (function () { throw new RuntimeError('Variable "filters" does not exist.', 96, $this->source); })()));
         echo ";
 const associations = ";
-        // line 79
-        echo json_encode((isset($context["associations"]) || array_key_exists("associations", $context) ? $context["associations"] : (function () { throw new RuntimeError('Variable "associations" does not exist.', 79, $this->source); })()));
+        // line 97
+        echo json_encode((isset($context["associations"]) || array_key_exists("associations", $context) ? $context["associations"] : (function () { throw new RuntimeError('Variable "associations" does not exist.', 97, $this->source); })()));
         echo ";
 
 console.log('tous les filtres', filters);
@@ -307,9 +330,8 @@ displayQuestion();
 
 
 
-
 ";
-        // line 392
+        // line 409
         echo "
 </script>
 
@@ -334,7 +356,7 @@ displayQuestion();
 
     public function getDebugInfo()
     {
-        return array (  313 => 392,  157 => 79,  153 => 78,  110 => 38,  93 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  335 => 409,  180 => 97,  176 => 96,  141 => 63,  137 => 60,  132 => 56,  127 => 52,  120 => 46,  115 => 42,  108 => 37,  91 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -344,7 +366,6 @@ displayQuestion();
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-{{ dump() }}
 
 {# <h1>Trouver mon asso</h1>
 
@@ -378,11 +399,31 @@ de développer de nouvelles compétences.  Continuez à faire une différence po
 </div>
 <img src=\"{{ asset('../images/1erpage.jpg')}}\" class=\"w-50\" alt=\"responsive-image\">
 
-<div class=\"workchoice\">
-<img src=\"../images/jeuxcartes.png\" class=\"w-25 image1\">
-<img src=\"../images/jeuxcartes.png\" class=\"w-25 image2\">
-<img src=\"../images/jeuxcartes.png\" class=\"w-25 image3\">
-</div>
+
+
+{# Question1 slide 1:accueil #}
+
+
+
+{# question2 slide 2:zoneRegions #}
+    <div class=\"map\">
+        <h1> Où habitez-vous ?</h1>
+    </div>  
+
+
+{# question3 slide 3:zoneModeDeTravail #}
+
+
+
+{# question3 slide 4: #}
+
+
+
+{# question3 slide 5: #}
+
+
+{# question3 slide 3:final #}
+
 
 <section class=\"questionnaire-body p-4 border rounded mx-auto\" id=\"slide-0\">
 
@@ -393,14 +434,13 @@ de développer de nouvelles compétences.  Continuez à faire une différence po
     </h3>
 
     <div class=\"d-grid gap-2\">
-        <button type=\"button\" class=\"btn btn-outline-dark btn-lg\">Réponse</button>
+        <button type=\"button\" class=\"btn btn-outline-dark btn-lg\" id=\"reponse-un\">Réponse</button>
         <button type=\"button\" class=\"btn btn-outline-dark btn-lg\">Réponse</button>
         <button type=\"button\" class=\"btn btn-outline-dark btn-lg\">Réponse</button>
         <button type=\"button\" class=\"btn btn-outline-danger btn-lg\">Retour</button>
     </div>
 
 </section>
-
 <script>
 const escapeXSS = (text) => {
     if (typeof text !== 'string') return text;
@@ -565,7 +605,6 @@ const displayResult = () => {
 };
 
 displayQuestion();
-
 
 
 

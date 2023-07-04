@@ -3,18 +3,39 @@
 {% block title %}Hello MissionController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{# <div class="workchoice">
+<img src="../images/jeuxcartes.png" class="w-25 image1">
+<img src="../images/jeuxcartes.png" class="w-25 image2">
+<img src="../images/jeuxcartes.png" class="w-25 image3">
+</div> #}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64-2/www/societeGenerale/src/Controller/MissionController.php'|file_link(0) }}">src/Controller/MissionController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64-2/www/societeGenerale/templates/mission/index.html.twig'|file_link(0) }}">templates/mission/index.html.twig</a></code></li>
-    </ul>
-</div>
+<h3 class="text-center">Quel format de mission souhaiteriez-vous ?</h3>
+<div class="workchoice">
+    <div class="card carte1">
+    <img src="../images/jeuxcartes.png" alt="Image 1">
+    <div class="overlay">
+        <img src="../images/jeuxcartes.png" class="HoverImage1"alt="Hover Image 1">
+        <p>distanciel</p>
+    </div>
+    </div>
+
+    <div class="card carte2">
+    <img src="../images/jeuxcartes.png" alt="Image 2">
+    <div class="overlay">
+        <img src="../images/presentiel.png" class="HoverImage2" alt="Hover Image 2">
+        <p>presentiel</p>
+    </div>
+    </div>
+
+    <div class="card carte3">
+    <img src="../images/jeuxcartes.png" alt="Image 3">
+    <div class="overlay">
+        <img src="../images/distanciel.png" class="HoverImage3"  alt="Hover Image 3">
+        <p>Mixte</p>
+    </div>
+    </div>
+</div> 
+
+
 {% endblock %}

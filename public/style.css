@@ -1,15 +1,73 @@
-.workchoice slide-3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.workchoice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+    width: 75%;
 }
 
-.image3{
-    transform: rotate(45deg) ;
+
+.card {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+  }
+  
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+  }
+  
+.card:hover .overlay {
+    opacity: 1;
+  }
+  
+.card .overlay img {
+    width: 100px;
+    height: 100px;
+  }
+  
+.card .overlay p {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+.card p{
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;   
+}
+  
+.carte1{
+    background-color: black ;
+    transform: rotate(330deg)
 }
 
-.image1{
-    transform: rotate(135deg);
+.carte2{
+    background-color: black ;
+    z-index:99;
 }
 
+.carte3{
+    background-color: black ;
+    transform: rotate(30deg);   
+}
