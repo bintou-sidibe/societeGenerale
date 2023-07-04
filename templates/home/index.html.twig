@@ -71,7 +71,7 @@ width: 50%;
         Question
     </h3>
 
-    <div class="d-grid gap-2">
+    <div class="d-grid carte gap-2">
         <button type="button" class="btn btn-outline-dark btn-lg" id="reponse-un">Réponse</button>
         <button type="button" class="btn btn-outline-dark btn-lg">Réponse</button>
         <button type="button" class="btn btn-outline-dark btn-lg">Réponse</button>
@@ -109,7 +109,7 @@ const modeDeTravail = filters.filter(filter => filter.type === 'mode-de-travail'
 const disponibilites = filters.filter(filter => filter.type === 'disponibilite');
 const missions = filters.filter(filter => filter.type === 'mission');
 
-let etape = 0;
+var etape = 0;
 const filtersSelected = {
     region: null,
     modeDeTravail: null,
@@ -333,11 +333,7 @@ taille--;
 
 
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> main
 {# const zoneAssos = document.querySelector('#assos');
 
 const zoneRegions = document.querySelector('.zone-regions');
