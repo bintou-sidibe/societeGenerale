@@ -62,11 +62,7 @@ de développer de nouvelles compétences.  Continuez à faire une différence po
 
 
 {# question3 slide 3:final #}
-    <div class="">
-    <h3> Voici ton association !</h3> 
-    <div>
-
-    </div>
+   
 
 
 <section class="questionnaire-body p-4 border rounded mx-auto" id="slide-0">
@@ -245,13 +241,19 @@ const displayResult = () => {
 
     questionnaireBody.innerHTML = `
     <h3 class="text-center mb-4">
+    <img src="{{ asset('../images/logo.png')}}" class="w-5" alt="responsive-image">
         Résultats
+
     </h3>
     <div class="d-grid gap-2">
         ${assos.map(asso => `
             <div class="card">
-                <div class="card-body">
+                <div class="card-body" style="
+font-weight: bold;">
                     ${escapeXSS(asso.name)}
+                </div>
+                <div class="card-body">
+                    ${escapeXSS(asso.description)}
                 </div>
             </div>
         `).join('')}
