@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} 
+{% endblock %}
+
+
+{% block body %}
+    <div class="text-center">
+        <h1 class="mb-4">Trouver ton association</h1>
+
+        <div class="container">
+            Votre volonté d'investissement dans des associations est admirable.
+            En vous impliquant, vous faites une différence concrète dans des domaines qui vous
+            tiennent à cœur. Votre engagement bénévole renforce le tissu social et vous offre l'opportunité
+            de développer de nouvelles compétences.  Continuez à faire une différence positive.
+        </div>
+        
+        <div class="mt-4">
+            <img src="{{ asset('../images/1erpage.jpg')}}" class="w-50 mx-auto" alt="responsive-image">
+        </div>
+
+        <div class="mt-4">
+            <a type="button" class="btn btn-danger btn-lg mx-auto" href="{{ path('app_question') }}">Continuez</a>
+        </div>
+    </div>
+
+
+<p>Quel format de mission souhaiteriez-vous?</p>
+<div class="workchoice">
+<img src="../images/jeuxcartes.png" class="w-25 image1">
+<img src="../images/jeuxcartes.png" class="w-25 image2">
+<img src="../images/jeuxcartes.png" class="w-25 image3">
+</div>
+{% endblock %}

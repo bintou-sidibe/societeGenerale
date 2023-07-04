@@ -67,7 +67,36 @@
     z-index:99;
 }
 
+
 .carte3{
     background-color: black ;
     transform: rotate(30deg);   
+}
+#map-france path {
+  fill: #E60028;
+  stroke: black;
+}
+#map-france path:hover {
+  fill: black;
+  stroke: white;
+  stroke-width: 5;
+  cursor: pointer;
+}
+
+#Progress_Status {
+  width: 50%;
+  background-color: #000000 ;
+  border-radius: 15px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 50px;
+}
+  
+#myprogressBar {
+  width: 25%;
+  height: 35px;
+  background-color:#E4002C;
+  text-align: center;
+  line-height: 32px;
+  transition: 2s;
 }
